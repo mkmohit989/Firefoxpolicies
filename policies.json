@@ -1,11 +1,77 @@
 {
   "policies": {
-    "Permissions": {
-      "Camera": { "BlockNewRequests": true, "Blocked": [], "Allow": [], "Locked": true },
-      "Microphone": { "BlockNewRequests": true, "Blocked": [], "Allow": [], "Locked": true },
-      "Location": { "BlockNewRequests": true, "Blocked": [], "Allow": [], "Locked": true },
-      "Notifications": { "BlockNewRequests": true, "Blocked": [], "Allow": [], "Locked": true },
-      "Autoplay": { "Default": "block-audio-video", "Allow": [], "Blocked": [], "Locked": true },
+    "DontCheckDefaultBrowser": true,
+    "DisableProfileImport": true,
+    "DisablePasswordManager": true,
+    "DisableTelemetry": true,
+    "DisableRemoteDebugging": true,
+    "DisableDeveloperTools": true,
+    "ImportEnterpriseRoots": false,
+
+    "Homepage": {
+      "URL": "https://www.example.com",
+      "Locked": true,
+      "StartPage": "homepage"
     },
-  },
-},
+
+    "Permissions": {
+      "Camera": { "BlockNewRequests": true, "Locked": true },
+      "Microphone": { "BlockNewRequests": true, "Locked": true },
+      "Location": { "BlockNewRequests": true, "Locked": true },
+      "Notifications": { "BlockNewRequests": true, "Locked": true },
+      "Autoplay": { "Default": "block-audio-video", "Locked": true }
+    },
+
+    "Preferences": {
+      "permissions.default.xr": { "Value": 2, "Status": "locked" },
+      "dom.disable_open_during_load": { "Value": true, "Status": "locked" },
+      "signon.rememberSignons": { "Value": false, "Status": "locked" },
+      "extensions.formautofill.addresses.enabled": { "Value": false, "Status": "locked" },
+      "extensions.formautofill.creditCards.enabled": { "Value": false, "Status": "locked" },
+      "datareporting.healthreport.uploadEnabled": { "Value": false, "Status": "locked" },
+      "datareporting.policy.dataSubmissionEnabled": { "Value": false, "Status": "locked" },
+      "toolkit.telemetry.enabled": { "Value": false, "Status": "locked" },
+      "toolkit.telemetry.unified": { "Value": false, "Status": "locked" },
+      "toolkit.telemetry.archive.enabled": { "Value": false, "Status": "locked" },
+      "toolkit.telemetry.reportingpolicy.firstRun": { "Value": false, "Status": "locked" },
+      "app.shield.optoutstudies.enabled": { "Value": false, "Status": "locked" },
+      "browser.newtabpage.activity-stream.feeds.telemetry": { "Value": false, "Status": "locked" },
+      "browser.ping-centre.telemetry": { "Value": false, "Status": "locked" },
+      "browser.newtabpage.activity-stream.telemetry": { "Value": false, "Status": "locked" },
+      "security.OCSP.enabled": { "Value": 1, "Status": "locked" },
+      "security.certerrors.permanentOverride": { "Value": false, "Status": "locked" },
+      "security.cert_pinning.enforcement_level": { "Value": 2, "Status": "locked" },
+      "browser.download.useDownloadDir": { "Value": false, "Status": "locked" },
+      "browser.download.dir": { "Value": "/nonexistent", "Status": "locked" },
+      "browser.download.folderList": { "Value": 2, "Status": "locked" },
+      "browser.download.manager.showWhenStarting": { "Value": false, "Status": "locked" },
+      "browser.download.manager.closeWhenDone": { "Value": true, "Status": "locked" },
+      "extensions.screenshots.disabled": { "Value": true, "Status": "locked" },
+      "browser.startup.page": { "Value": 1, "Status": "locked" },
+      "browser.newtabpage.enabled": { "Value": false, "Status": "locked" },
+      "browser.newtab.url": { "Value": "https://www.example.com", "Status": "locked" },
+      "dom.security.https_only_mode": { "Value": true, "Status": "locked" },
+      "dom.security.https_only_mode_pbm": { "Value": true, "Status": "locked" },
+      "browser.safebrowsing.malware.enabled": { "Value": true, "Status": "locked" },
+      "browser.safebrowsing.phishing.enabled": { "Value": true, "Status": "locked" },
+      "browser.safebrowsing.downloads.enabled": { "Value": true, "Status": "locked" },
+      "browser.safebrowsing.downloads.remote.enabled": { "Value": true, "Status": "locked" },
+      "browser.safebrowsing.downloads.remote.block_potentially_unwanted": { "Value": true, "Status": "locked" },
+      "browser.safebrowsing.downloads.remote.block_uncommon": { "Value": true, "Status": "locked" }
+    },
+
+    "ExtensionSettings": {
+      "*": { "installation_mode": "blocked" },
+      "firefox_extension@calendly.com": { "installation_mode": "allowed" },
+      "firefox@ghostery.com": {
+        "installation_mode": "force_installed",
+        "install_url": "https://addons.mozilla.org/firefox/downloads/latest/ghostery/latest.xpi"
+      }
+    },
+
+    "DNSOverHTTPS": {
+      "Enabled": true,
+      "Locked": true
+    }
+  }
+}
