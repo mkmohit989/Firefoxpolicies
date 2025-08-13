@@ -1,0 +1,11 @@
+{
+  "policies": {
+    "Permissions": {
+      "Camera": { "BlockNewRequests": true, "Blocked": [], "Allow": [], "Locked": true },
+      "Microphone": { "BlockNewRequests": true, "Blocked": [], "Allow": [], "Locked": true },
+      "Location": { "BlockNewRequests": true, "Blocked": [], "Allow": [], "Locked": true },
+      "Notifications": { "BlockNewRequests": true, "Blocked": [], "Allow": [], "Locked": true },
+      "Autoplay": { "Default": "block-audio-video", "Allow": [], "Blocked": [], "Locked": true },
+    },
+  },
+},
